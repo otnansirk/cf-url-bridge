@@ -4,10 +4,12 @@ export default {
     const wa_number = url.searchParams.get("n");
     const message = `
     Halo, saya ingin pesan Bright Gas.
+
     Nama:
     Alamat:
     Produk Pesanan:
     Jam Pemesanan:
+
     Terima Kasih
     `
 
