@@ -12,7 +12,7 @@ Terima Kasih
 `
 
     if (!wa_number) {
-      return new Response("Missing 'wa_number' parameter", { status: 400 });
+      return new Response("Missing 'n' parameter", { status: 400 });
     }
 
     const target = `https://wa.me/${encodeURIComponent(wa_number)}?text=${message}`;
