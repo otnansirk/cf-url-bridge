@@ -8,7 +8,7 @@ export default {
     Nama:
     Alamat:
     Produk Pesanan:
-    Jam Pemesanan:
+    Waktu pengantaran:
 
     Terima Kasih
     `
