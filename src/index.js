@@ -3,14 +3,19 @@ export default {
     const url = new URL(request.url);
     const wa_number = url.searchParams.get("n");
     const message = `
-    Halo, saya ingin pesan Bright Gas.
+    Halo PDS BG Express, saya ingin pesan Bright Gas.
 
-    Nama:
-    Alamat:
-    Produk Pesanan:
-    Waktu pengantaran:
-
-    Terima Kasih
+    *Nama*:
+    *Alamat*:
+    *Produk Pesanan*: …. (12kg/5,5kg/BG Can)
+    *Waktu pengantaran*:
+    Hari…
+    Tanggal … 
+    Pukul …
+    
+    *Penukaran Tabung LPG 3kg*: … (Ya/Tidak) … tabung 3kg
+    
+    Terima kasih 🙏🏻
     `
 
     const encodedMessage = encodeURIComponent(message);
