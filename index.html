@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirect WA</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const url = new URL(window.location.href);
+      const wa_number = url.searchParams.get("n");
+      const message = `
+Halo PDS BG Express, saya ingin pesan Bright Gas.
+
+*Nama*:
+*Alamat*:
+*Produk Pesanan*: …. (12kg/5,5kg/BG Can)
+*Waktu pengantaran*:
+Hari…
+Tanggal … 
+Pukul …
+
+*Penukaran Tabung LPG 3kg*: … (Ya/Tidak) … tabung 3kg
+
+Terima kasih 🙏🏻
+`;
+
+      if (!wa_number) {
+        document.body.innerHTML = "<h3>Missing 'n' parameter</h3>";
+        return;
+      }
+
+      const encodedMessage = encodeURIComponent(message);
+      const target = `https://wa.me/${encodeURIComponent(wa_number)}?text=${encodedMessage}`;
+
+      // Redirect
+      window.location.href = target;
+    });
+  </script>
+</head>
+<body>
+</body>
+</html>
